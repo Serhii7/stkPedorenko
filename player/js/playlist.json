@@ -1,0 +1,5 @@
+var play =[
+	{"song":"Lana Del Rey – Old Money.mp3", "cover":"first.jpg"}, 
+	{"song":"Lana_Del_Rey_Love_771-1.mp3", "cover":"second.jpg"}, 
+	{"song":"lana-del-rey-west-coast-the-young-professionals-minimal-remix-extended_(mp3.cc).mp3", "cover":"next.jpg"}
+];

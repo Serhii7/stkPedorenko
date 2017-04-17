@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MP3</title>
+	<link href="./stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+	<div class="container">
+		<div id="cover">
+			<img src="" id = "cover-img">
+			<div id="volume">
+				<div id = "vMin"></div>
+					<div id = "wrapperVolumeProgresss">
+						<div id="progressVolume"></div>
+						<input type="range" id="valumer" min = "0" max = "50" value="25">
+					</div>
+				<div id = "vMax"></div>
+			</div>
+			<div class="nav-wrapper">
+				<div class="inbar">
+					<div class="button">
+						<div id="rep" title = "repeat" class = "grey"></div>
+						<div id="col" title = "random" class = "grey"></div>
+						<div id="vol" title = "volume" class = "grey"></div>
+					</div>
+					<div id="duration">0.00</div>
+					<div id="artist"><marquee> Sergey Sergey Segrey</marquee></div>
+				</div>
+				<div id="progress">
+					<div id="progressCurrent"></div>
+					<input type="range" id = "progressBar" min = "0" value = "0">
+				</div>
+				<div class = "nav">
+					<div id="prev"></div>
+					<div id="play"></div>
+					<div id="pause"></div>
+					<div id="next"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src = './js/jquery-3.2.1.min.js' ></script>
+	<script type="text/javascript" src = './js/playlist.json'></script>
+	<script type="text/javascript" src = './js/index.js'></script>
+</body>
+</html>

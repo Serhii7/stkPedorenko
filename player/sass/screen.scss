@@ -1,0 +1,356 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+*{
+	outline: none;
+}
+body{
+	font-size: 14px;
+	font-family: 'Arial' sans-serif;
+}
+.container{
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-left: -176px;
+	margin-top: -143px;
+	width: 352px;
+	height: 286px;
+	border-radius: 15px;
+	background: #456;
+	overflow: hidden;
+	box-shadow: 0px 19px 43px 0px rgba(80, 81, 116, 0.86);
+	#cover-img{
+		width: 100%;
+	}
+	#volume{
+		height: 45px;
+		background: rgba(0,0,0,0.6);
+		width: 100%;
+		text-align: center;
+		padding-top: 15px;
+		box-sizing: border-box;
+		position: absolute;
+		bottom: 106px;
+		display: none;
+		input[type=range]{
+			width:208px;
+			margin:0;
+			-webkit-appearance: none!important;
+			-moz-appearance: none!important;
+			-ms-appearance: none!important;
+			height: 2px;
+			background: rgb(213, 199, 189);
+			padding:0;
+		}
+		input[type=range]::-moz-range-track , 
+		input[type=range]::-ms-track{
+			width:208px;
+			margin: 0px 0px;
+			height: 21px;
+			-moz-appearance: none!important;
+			background: rgb(213, 199, 189);
+			border:none !important;
+			padding: 0;
+			background: transparent; 
+			border-color: transparent;
+			color: transparent;
+		}
+		
+		input::-webkit-slider-thumb{
+			-webkit-appearance: none!important;
+			background:url('../images/player.png') no-repeat;
+			background-position: 0px 1px;
+			position: relative;
+			z-index: 99;
+			height: 22px;
+			width: 21px;
+		}
+		input::-moz-range-thumb{
+			-moz-appearance: none!important;
+			background:url('../images/player.png') no-repeat;
+			background-position: 0px 0px;
+			height: 21px;
+			display: block;
+			width: 21px;
+			border:none !important;
+		}
+		input[type=range]::-ms-thumb {
+			-ms-appearance: none!important;
+			/*background:url('../images/player.png');*/
+			/*background-position: 0px 0px;*/
+			height: 22px;
+			width: 20px;
+			background: #ed553b;
+			border:none !important;
+			position: absolute;
+		}
+		input[type=range]::-ms-fill-upper {
+			background:rgb(213, 199, 189);
+			height: 2px;
+			
+		}
+		input[type=range]::-ms-fill-lower {
+			background:rgb(213, 199, 189);
+			height: 2px;
+			
+		}
+	
+		#wrapperVolumeProgresss{
+			width: 208px;
+			height:2px;
+			margin: 0 auto;
+			position: relative;
+		}
+		#progressVolume{
+			position: absolute;
+			height: 4px;
+			background: #ed553b;
+			width: 0%;
+			bottom: -10px;
+			z-index: 0;
+		}
+		input[type="range"]::-moz-range-progress {
+		background: #ed553b;
+		}
+
+		#vMin{
+			float: left;
+    		margin: 0px 0 0 49px;
+			width: 10px;
+			height: 18px;
+			background: url('../images/VolMin.png') no-repeat;
+			background-size: cover;
+		}
+		#vMax{
+			float: right;
+			margin: 0px 40px 0 0;
+			width: 22px;
+			height: 18px;
+			background: url('../images/VolMax.png') no-repeat;
+			background-size: cover;
+		}
+	}
+	#play{
+		width: 28px;
+		height: 32px;
+		background: url('../images/play.png');
+		cursor: pointer;
+		float: left;
+	}
+	.grey{
+		-webkit-filter: grayscale(100%);
+		 -moz-filter: grayscale(100%);
+		 /*-ms-filter: grayscale(100%);*/
+		 -o-filter: grayscale(100%);
+		 filter: grayscale(100%);
+		 filter: gray;
+		 opacity: 0.4;
+		 &:hover{
+		 	-webkit-filter: none;
+		 	 -moz-filter: none;
+		 	 -ms-filter: none;
+		 	 -o-filter: none;
+		 	 filter: none;
+		 	 filter: none;
+		 	 opacity: 1;
+		 }
+	}
+	#pause{
+		width: 28px;
+		height: 28px;
+		box-sizing: border-box;
+		border-left: 8px solid #fff;
+		border-right: 8px solid #fff;
+		cursor: pointer;
+		float: left;
+		display: none;
+	}
+	#prev, #next{
+		width: 24px;
+		height: 16px;
+		margin: 7px 40px;
+	}
+	#prev{
+		background: url(../images/rewind.png);
+		cursor: pointer;
+		float: left;
+	}
+	.inbar{
+		overflow: hidden;
+		
+	}
+	.nav{
+		overflow: hidden;
+		width: 236px;
+		margin: 0 auto;
+	}
+	.nav-wrapper{
+		background: rgba(45,13,38,0.85);
+		height: 106px;
+		border-top: 1px solid #000;
+		box-sizing: border-box;
+		padding-top: 7px;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+	#cover{
+		position: relative;
+		height: 100%;
+	}
+	.button {
+		width: 48px;
+		float:left;
+		overflow: hidden;
+		margin-left: 15px;
+	}
+	#artist{
+		text-align: center;
+		overflow: hidden;
+		color:#9e8784;
+		padding:0 15px;
+
+	}
+	#duration{
+		width: 48px;
+		float: right;
+		margin-right: 15px;
+		color:#9e8784;
+	}
+	#progress{
+		clear: both;
+		overflow: hidden;
+	}
+
+	#next{
+		background: url('../images/forward.png');
+		cursor: pointer;
+		float: left;
+	}
+	#rep{
+		width: 16px;
+		height: 11px;
+		float:left;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		background: url('../images/rep.png') no-repeat;
+		cursor: pointer;
+	}
+	#col{
+		width: 16px;
+		height: 10px;
+		float: left;
+		background: url('../images/arr.png') no-repeat;
+		cursor: pointer;
+	}
+	#vol{
+		width: 10px;
+		height: 13px;
+		clear: both;
+		background: url('../images/vol.png')  no-repeat;
+		cursor: pointer;
+	}
+	#progress{
+		/*background: #7e7e7e;*/
+		width: 100%;
+		overflow: hidden;
+		/*height: 5px;
+		margin: 10px 0;*/
+	}
+	#progressCurrent{
+		width: 0%;
+		height: 5px;
+		background: #ed553b;
+		position: absolute;
+		bottom: 10px;
+	}
+	#progressBar{
+		display: block;
+		width: 365px;
+		margin: 0;
+	}
+	#progress{
+		position: relative;
+		input{
+			height: 2px;
+			margin: 10px 0;
+			-webkit-appearance: none!important;
+			background: rgb(213, 199, 189);
+			padding: 0;
+		}
+		input::-webkit-slider-thumb{
+				-webkit-appearance: none!important;
+				background:url('../images/thumb.png') no-repeat;
+				background-position: 0px 1px;
+				position: relative;
+				z-index: 99;
+				height: 22px;
+				width: 21px;
+		}
+		input::-moz-range-thumb{
+			-moz-appearance: none!important;
+			background:url('../images/thumb.png') no-repeat;
+			background-position: 0px 0px;
+			height: 20px;
+			display: block;
+			width: 9px;
+			border:none !important;
+		}
+		input[type=range]::-ms-thumb {
+			-ms-appearance: none!important;
+			background-color: #000;
+			height: 10px;
+			width: 10px;
+			border:none !important;
+			position: absolute;
+		}
+		input[type=range]::-ms-fill-upper {
+			background:rgb(213, 199, 189);
+			height: 2px;
+			
+		}
+		input[type=range]::-ms-fill-lower {
+			background:#ed553b;
+			height: 2px;
+			
+		}
+		input[type="range"]::-moz-range-progress {
+			background: #ed553b;
+		}
+		input[type=range]::-moz-range-track , 
+		input[type=range]::-ms-track{
+			width:208px;
+			margin: 0px 0px;
+			height: 3px;
+			-moz-appearance: none!important;
+			background: rgb(213, 199, 189);
+			border:none !important;
+			padding: 0;
+			background: transparent; 
+			border-color: transparent;
+			color: transparent;
+		}
+		
+
+	}
+
+}
+@media screen and (max-width: 352px){
+	.container{
+		width: 320px;
+		margin-left: -160px;
+	}
+	.container #volume input[type=range] {
+		width: 175px;
+	}
+	.container #volume #wrapperVolumeProgresss {
+		width: 175px;
+	}
+
+}
+

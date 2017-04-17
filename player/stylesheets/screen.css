@@ -1,0 +1,458 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 8, ../sass/screen.scss */
+* {
+  outline: none;
+}
+
+/* line 11, ../sass/screen.scss */
+body {
+  font-size: 14px;
+  font-family: 'Arial' sans-serif;
+}
+
+/* line 15, ../sass/screen.scss */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -176px;
+  margin-top: -143px;
+  width: 352px;
+  height: 286px;
+  border-radius: 15px;
+  background: #456;
+  overflow: hidden;
+  box-shadow: 0px 19px 43px 0px rgba(80, 81, 116, 0.86);
+}
+/* line 27, ../sass/screen.scss */
+.container #cover-img {
+  width: 100%;
+}
+/* line 30, ../sass/screen.scss */
+.container #volume {
+  height: 45px;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  text-align: center;
+  padding-top: 15px;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 106px;
+  display: none;
+}
+/* line 40, ../sass/screen.scss */
+.container #volume input[type=range] {
+  width: 208px;
+  margin: 0;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  -ms-appearance: none !important;
+  height: 2px;
+  background: #d5c7bd;
+  padding: 0;
+}
+/* line 50, ../sass/screen.scss */
+.container #volume input[type=range]::-moz-range-track,
+.container #volume input[type=range]::-ms-track {
+  width: 208px;
+  margin: 0px 0px;
+  height: 21px;
+  -moz-appearance: none !important;
+  background: #d5c7bd;
+  border: none !important;
+  padding: 0;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+/* line 64, ../sass/screen.scss */
+.container #volume input::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: url("../images/player.png") no-repeat;
+  background-position: 0px 1px;
+  position: relative;
+  z-index: 99;
+  height: 22px;
+  width: 21px;
+}
+/* line 73, ../sass/screen.scss */
+.container #volume input::-moz-range-thumb {
+  -moz-appearance: none !important;
+  background: url("../images/player.png") no-repeat;
+  background-position: 0px 0px;
+  height: 21px;
+  display: block;
+  width: 21px;
+  border: none !important;
+}
+/* line 82, ../sass/screen.scss */
+.container #volume input[type=range]::-ms-thumb {
+  -ms-appearance: none !important;
+  /*background:url('../images/player.png');*/
+  /*background-position: 0px 0px;*/
+  height: 22px;
+  width: 20px;
+  background: #ed553b;
+  border: none !important;
+  position: absolute;
+}
+/* line 92, ../sass/screen.scss */
+.container #volume input[type=range]::-ms-fill-upper {
+  background: #d5c7bd;
+  height: 2px;
+}
+/* line 97, ../sass/screen.scss */
+.container #volume input[type=range]::-ms-fill-lower {
+  background: #d5c7bd;
+  height: 2px;
+}
+/* line 103, ../sass/screen.scss */
+.container #volume #wrapperVolumeProgresss {
+  width: 208px;
+  height: 2px;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 109, ../sass/screen.scss */
+.container #volume #progressVolume {
+  position: absolute;
+  height: 4px;
+  background: #ed553b;
+  width: 0%;
+  bottom: -10px;
+  z-index: 0;
+}
+/* line 117, ../sass/screen.scss */
+.container #volume input[type="range"]::-moz-range-progress {
+  background: #ed553b;
+}
+/* line 121, ../sass/screen.scss */
+.container #volume #vMin {
+  float: left;
+  margin: 0px 0 0 49px;
+  width: 10px;
+  height: 18px;
+  background: url("../images/VolMin.png") no-repeat;
+  background-size: cover;
+}
+/* line 129, ../sass/screen.scss */
+.container #volume #vMax {
+  float: right;
+  margin: 0px 40px 0 0;
+  width: 22px;
+  height: 18px;
+  background: url("../images/VolMax.png") no-repeat;
+  background-size: cover;
+}
+/* line 138, ../sass/screen.scss */
+.container #play {
+  width: 28px;
+  height: 32px;
+  background: url("../images/play.png");
+  cursor: pointer;
+  float: left;
+}
+/* line 145, ../sass/screen.scss */
+.container .grey {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  /*-ms-filter: grayscale(100%);*/
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+  opacity: 0.4;
+}
+/* line 153, ../sass/screen.scss */
+.container .grey:hover {
+  -webkit-filter: none;
+  -moz-filter: none;
+  -ms-filter: none;
+  -o-filter: none;
+  filter: none;
+  filter: none;
+  opacity: 1;
+}
+/* line 163, ../sass/screen.scss */
+.container #pause {
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  border-left: 8px solid #fff;
+  border-right: 8px solid #fff;
+  cursor: pointer;
+  float: left;
+  display: none;
+}
+/* line 173, ../sass/screen.scss */
+.container #prev, .container #next {
+  width: 24px;
+  height: 16px;
+  margin: 7px 40px;
+}
+/* line 178, ../sass/screen.scss */
+.container #prev {
+  background: url(../images/rewind.png);
+  cursor: pointer;
+  float: left;
+}
+/* line 183, ../sass/screen.scss */
+.container .inbar {
+  overflow: hidden;
+}
+/* line 187, ../sass/screen.scss */
+.container .nav {
+  overflow: hidden;
+  width: 236px;
+  margin: 0 auto;
+}
+/* line 192, ../sass/screen.scss */
+.container .nav-wrapper {
+  background: rgba(45, 13, 38, 0.85);
+  height: 106px;
+  border-top: 1px solid #000;
+  box-sizing: border-box;
+  padding-top: 7px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/* line 202, ../sass/screen.scss */
+.container #cover {
+  position: relative;
+  height: 100%;
+}
+/* line 206, ../sass/screen.scss */
+.container .button {
+  width: 48px;
+  float: left;
+  overflow: hidden;
+  margin-left: 15px;
+}
+/* line 212, ../sass/screen.scss */
+.container #artist {
+  text-align: center;
+  overflow: hidden;
+  color: #9e8784;
+  padding: 0 15px;
+}
+/* line 219, ../sass/screen.scss */
+.container #duration {
+  width: 48px;
+  float: right;
+  margin-right: 15px;
+  color: #9e8784;
+}
+/* line 225, ../sass/screen.scss */
+.container #progress {
+  clear: both;
+  overflow: hidden;
+}
+/* line 230, ../sass/screen.scss */
+.container #next {
+  background: url("../images/forward.png");
+  cursor: pointer;
+  float: left;
+}
+/* line 235, ../sass/screen.scss */
+.container #rep {
+  width: 16px;
+  height: 11px;
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  background: url("../images/rep.png") no-repeat;
+  cursor: pointer;
+}
+/* line 244, ../sass/screen.scss */
+.container #col {
+  width: 16px;
+  height: 10px;
+  float: left;
+  background: url("../images/arr.png") no-repeat;
+  cursor: pointer;
+}
+/* line 251, ../sass/screen.scss */
+.container #vol {
+  width: 10px;
+  height: 13px;
+  clear: both;
+  background: url("../images/vol.png") no-repeat;
+  cursor: pointer;
+}
+/* line 258, ../sass/screen.scss */
+.container #progress {
+  /*background: #7e7e7e;*/
+  width: 100%;
+  overflow: hidden;
+  /*height: 5px;
+  margin: 10px 0;*/
+}
+/* line 265, ../sass/screen.scss */
+.container #progressCurrent {
+  width: 0%;
+  height: 5px;
+  background: #ed553b;
+  position: absolute;
+  bottom: 10px;
+}
+/* line 272, ../sass/screen.scss */
+.container #progressBar {
+  display: block;
+  width: 365px;
+  margin: 0;
+}
+/* line 277, ../sass/screen.scss */
+.container #progress {
+  position: relative;
+}
+/* line 279, ../sass/screen.scss */
+.container #progress input {
+  height: 2px;
+  margin: 10px 0;
+  -webkit-appearance: none !important;
+  background: #d5c7bd;
+  padding: 0;
+}
+/* line 286, ../sass/screen.scss */
+.container #progress input::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  background: url("../images/thumb.png") no-repeat;
+  background-position: 0px 1px;
+  position: relative;
+  z-index: 99;
+  height: 22px;
+  width: 21px;
+}
+/* line 295, ../sass/screen.scss */
+.container #progress input::-moz-range-thumb {
+  -moz-appearance: none !important;
+  background: url("../images/thumb.png") no-repeat;
+  background-position: 0px 0px;
+  height: 20px;
+  display: block;
+  width: 9px;
+  border: none !important;
+}
+/* line 304, ../sass/screen.scss */
+.container #progress input[type=range]::-ms-thumb {
+  -ms-appearance: none !important;
+  background-color: #000;
+  height: 10px;
+  width: 10px;
+  border: none !important;
+  position: absolute;
+}
+/* line 312, ../sass/screen.scss */
+.container #progress input[type=range]::-ms-fill-upper {
+  background: #d5c7bd;
+  height: 2px;
+}
+/* line 317, ../sass/screen.scss */
+.container #progress input[type=range]::-ms-fill-lower {
+  background: #ed553b;
+  height: 2px;
+}
+/* line 322, ../sass/screen.scss */
+.container #progress input[type="range"]::-moz-range-progress {
+  background: #ed553b;
+}
+/* line 325, ../sass/screen.scss */
+.container #progress input[type=range]::-moz-range-track,
+.container #progress input[type=range]::-ms-track {
+  width: 208px;
+  margin: 0px 0px;
+  height: 3px;
+  -moz-appearance: none !important;
+  background: #d5c7bd;
+  border: none !important;
+  padding: 0;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+@media screen and (max-width: 352px) {
+  /* line 344, ../sass/screen.scss */
+  .container {
+    width: 320px;
+    margin-left: -160px;
+  }
+
+  /* line 348, ../sass/screen.scss */
+  .container #volume input[type=range] {
+    width: 175px;
+  }
+
+  /* line 351, ../sass/screen.scss */
+  .container #volume #wrapperVolumeProgresss {
+    width: 175px;
+  }
+}
